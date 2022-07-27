@@ -8,6 +8,11 @@ body.gradient3{
     background-image: red;
 }
 
+/* width */
+.width{
+    width: 50%;
+}
+
 
 /* Margins */
 .margin-top{

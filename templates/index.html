@@ -14,14 +14,15 @@
 </head>
 <body class="gradient2">
 
-{% include 'header.html' %}
-    
-<h3 class="container center-text margin-60 card">Nothing is more effective than consistency when it comes to making your company, or your performance, stand out.</h3>
+<!-- {% include 'header.html' %} -->
+    <div class='container'>
+        <h3 class="center-text margin-100">Nothing is more effective than consistency when it comes to making your company, or your performance, stand out.</h3>
+    </div>
 
     <div class="container margin-bottom">
         <div class="row">
             <div class="col margin-100 margin-bottom">
-                <h3 class="center-text margin-60">Thing Todo</h3>
+                <h3 class="center-text margin-60">Things Todo</h3>
                     <ul class="list-group">
                       {% for i in task %}
                             <form action="{{ url_for('done', no=i.id) }}" method="post">
@@ -31,6 +32,12 @@
                                   </li>
                             </form>
                       {% endfor %}
+                      <br><br>
+                      <li class="list-group">
+                        <!-- <label class="form-check-label margin-side">Add Your task here </label> -->
+                        <input type="text" class="form-control " aria-label="Text input with segmented dropdown button" name="task" placeholder="Add your todo here!">
+                        <button type="submit" class="btn btn-outline-secondary">Add</button>
+                      </li>
                       </ul>
             </div>
             <div class="col margin-100 margin-bottom">
@@ -48,15 +55,8 @@
         </div>
     </div>
 
-    <div class="container center-text margin-bottom">
-        <form action="{{ url_for('add') }}" method="post">
-            <div class="input-group">
-                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" name="task">
-                <button type="submit" class="btn btn-outline-secondary">Add</button>
-              </div>
-        </form>
-    </div>
 
-{% include 'footer.html' %}
+
+<!-- {% include 'footer.html' %} -->
 </body>
 </html>
