@@ -1,0 +1,65 @@
+body.gradient{
+    background-color: #ffcc99;
+}
+body.gradient2{
+    background: linear-gradient(to left top, rgb(51, 204, 255) 0%, rgb(255, 153, 153) 100%);
+}
+body.gradient3{
+    background-image: red;
+}
+
+
+/* Margins */
+.margin-top{
+    margin-top: 30px;
+}
+.margin-bottom{
+    margin-bottom: 30px;
+}
+.margin-side{
+    margin: 0px 60px;
+}
+.margin-10{
+    margin: 10px;
+}
+.margin-20{
+    margin: 20px;
+}
+.margin-40{
+    margin: 40px;
+}
+.margin-60{
+    margin: 60px;
+}
+.margin-80{
+    margin: 80px;
+}
+.margin-100{
+    margin: 100px;
+}
+
+
+/* Centering things */
+.center{
+    display: flex;
+}
+.center-text{
+    text-align: center;
+}
+
+
+/* Card thing */
+.card{
+    background: linear-gradient(to left top, rgb(51, 204, 255) 0%, rgb(255, 153, 153) 100%);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* Inner Content */
+.inner-content{
+    margin: 40px;
+}
+
+/* Simple color */
+.red{
+    background-color: red;
+}
