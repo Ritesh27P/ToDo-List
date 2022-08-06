@@ -26,7 +26,6 @@ def home():
 @app.route('/done', methods=['POST', 'GET'])
 def done():
     task_done = request.args.get('no')
-    print(task_done)
     done_task = Todo.query.filter_by(id=task_done).all()
     for i in done_task:
         i.status = 1
@@ -38,6 +37,9 @@ def done():
 def add():
     if request.method == 'POST':
         task = request.form.get('task')
+        if (task == None):
+            print('hii')
+            return redirect(url_for('home'))
         new_task = Todo(
             task=task,
             status=0
@@ -45,6 +47,18 @@ def add():
         db.session.add(new_task)
         db.session.commit()
     return redirect(url_for('home'))
+
+
+@app.route('/remove', methods=['POST', 'GET'])
+def remove():
+    if request.method == 'POST':
+        remove_list = Todo.query.filter_by(status='1').all()
+        print(remove_list)
+        for i in remove_list:       
+            db.session.delete(i)
+        
+        db.session.commit()
+    return redirect( url_for('home'))
 
 
 if __name__ == '__main__':
